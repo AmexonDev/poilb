@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>404 - Nie znaleziono strony</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #1d1d1d;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .wind {
+            position: absolute;
+            font-size: 100px;
+            opacity: .08;
+            animation: wind 8s linear infinite;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(20, 28, 40, .85);
+            backdrop-filter: blur(12px);
+
+            padding: 45px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, .08);
+
+            box-shadow:
+                0 10px 40px rgba(0, 0, 0, .4),
+                inset 0 1px rgba(255, 255, 255, .08);
+        }
+
+        h1 {
+            font-size: 110px;
+            margin: 0;
+
+            background: linear-gradient(135deg, #60a5fa, #2563eb);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        h2 {
+            margin-top: 10px;
+        }
+
+        .info {
+            margin: 25px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #d8e3ef;
+        }
+
+        .return {
+            display: inline-block;
+
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+
+            text-decoration: none;
+
+            padding: 12px 25px;
+            border-radius: 12px;
+
+            font-size: 16px;
+            font-weight: 600;
+
+            box-shadow: 0 8px 20px rgba(37, 99, 235, .35);
+            transition: .25s;
+        }
+
+        .return:hover {
+            transform: translateY(-2px);
+        }
+
+        @keyframes wind {
+            from {
+                transform: translateX(-100vw) rotate(0deg);
+            }
+
+            to {
+                transform: translateX(100vw) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wind">🌪️</div>
+
+    <div class="container">
+
+        <h1>404</h1>
+
+        <h2>
+            Ups! Ta strona została porwana przez silny wiatr.
+        </h2>
+
+        <div class="info">
+            💨 Prędkość wiatru: <b>404 km/h</b><br>
+            📍 Lokalizacja: <b>nieznana</b><br>
+            ⚠️ Status: <b>brak strony</b>
+        </div>
+
+        <a class="return" href="radar.html">
+            Wróć na radar
+        </a>
+
+    </div>
+
+</body>
+
+</html>
