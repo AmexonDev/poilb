@@ -5,6 +5,11 @@ fetch("others/navbar.html")
 
     let page = location.pathname.split("/").pop();
 
+    // Jeśli adres kończy się na domenie, ustaw index.html
+    if (page === "") {
+        page = "index.html";
+    }
+
     document.querySelectorAll(".navbar a").forEach(a => {
         if (a.href.includes(page)) {
             a.classList.add("active");
